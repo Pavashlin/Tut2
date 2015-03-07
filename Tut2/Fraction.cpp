@@ -57,5 +57,40 @@ int Fraction::getd()				//returns denominator
 	return d;
 }
 
+Fraction Fraction::operator+(Fraction &milk)
+{
+	Fraction cookies;
+
+	cookies.n = n*milk.d + milk.n*d;
+	cookies.d = d*milk.d;
+	return cookies;
+
+}
+
+Fraction Fraction:: operator-(Fraction &milk)
+{
+	Fraction cookies;
+
+	cookies.n = n*milk.d - milk.n*d;
+	cookies.d = d*milk.d;
+	return cookies;
+}
+
+Fraction Fraction:: operator*(Fraction &milk)
+{
+	Fraction cookies;
+
+	cookies.n = n*milk.n;
+	cookies.d = d*milk.d;
+	return cookies;
+}
+
+Fraction Fraction:: operator/(Fraction &milk)
+{
+	Fraction cookies;
+
+	cookies.n = n*milk.d;
+	cookies.d = d*milk.n;
+	return cookies;
 
 }
