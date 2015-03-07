@@ -24,7 +24,6 @@ public:
 	Fraction operator-(Fraction &);
 	Fraction operator*(Fraction &);
 	Fraction operator/(Fraction &);
-
 };
 
 #endif

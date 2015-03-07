@@ -39,8 +39,6 @@ Fraction::~Fraction()
 	d = 0;
 };
 
-
-
 void Fraction::setn(int x)			//sets numerator
 {
 	n = x;
