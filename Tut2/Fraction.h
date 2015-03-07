@@ -7,6 +7,7 @@ class Fraction
 {
 
 private:
+	int w;		//whole number
 	int n;		//numerator
 	int d;		//denominator
 
@@ -15,6 +16,7 @@ public:
 	~Fraction();
 	void setn(int);
 	void setd(int);
+	void setw(int);
 	int getn();
 	int getd();
 

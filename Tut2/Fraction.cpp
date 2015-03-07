@@ -1,15 +1,18 @@
+
 class Fraction
 
 {
 private:
+	int w;		//whole number
 	int n;		//numerator
 	int d;		//denominator
-
+	
 public:
 	Fraction();
 	~Fraction();
 	void setn(int);
 	void setd(int);
+	void setw(int);
 	int getn();
 	int getd();
 
@@ -17,12 +20,13 @@ public:
 	Fraction operator-(Fraction &);
 	Fraction operator*(Fraction &);
 	Fraction operator/(Fraction &);
-
+	
 };
 
 
 Fraction::Fraction()
 {
+	w = 0;
 	n = 0;
 	d = 0;
 };
@@ -30,10 +34,10 @@ Fraction::Fraction()
 
 Fraction::~Fraction()
 {
+	w = 0;
 	n = 0;
 	d = 0;
 };
-
 
 
 
@@ -47,6 +51,11 @@ void Fraction::setd(int y)			//sets denominator
 	d = y;
 }
 
+void Fraction::setw(int z)
+{
+	w = z;
+}
+
 int Fraction::getn()				//returns numerator 
 {
 	return n;
@@ -56,6 +65,9 @@ int Fraction::getd()				//returns denominator
 {
 	return d;
 }
+
+
+
 
 Fraction Fraction::operator+(Fraction &milk)
 {
