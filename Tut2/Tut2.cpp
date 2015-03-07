@@ -14,17 +14,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	int var1=0, var2=0, var3=0, var4=0, var5=0, var6=0;
 	void read(int *a, int *b, int *c, int *d, int *e, int *f);
 
+	int N1, N2;
+	
 	read(&var1,&var2,&var3,&var4,&var5,&var6);
 
-	toast.setw(var1);
-	toast.setn(var2);
+	N1 = (var1*var3) + var2;
+	N2 = (var4*var6) + var5;
+
+	toast.setn(N1);
 	toast.setd(var3);
-	eggs.setw(var4);
-	eggs.setn(var5);
+	eggs.setn(N2);
 	eggs.setd(var6);
 	
 
-	
+
 		
 	return 0;
 }

@@ -12,7 +12,6 @@ public:
 	~Fraction();
 	void setn(int);
 	void setd(int);
-	void setw(int);
 	int getn();
 	int getd();
 
@@ -47,11 +46,6 @@ void Fraction::setn(int x)			//sets numerator
 void Fraction::setd(int y)			//sets denominator
 {
 	d = y;
-}
-
-void Fraction::setw(int z)
-{
-	w = z;
 }
 
 int Fraction::getn()				//returns numerator 
