@@ -12,13 +12,13 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	Fraction toast, eggs, breakfast;
 	int var1=0, var2=0, var3=0, var4=0, var5=0, var6=0;
-	void read(int *a, int *b, int *c, int *d, int *e, int *f);
+	void read(int *a, int *b, int *c, int *d, int *e, int *f);			//function to read mixed numbers 
 
 	int N1, N2;
 	
 	read(&var1,&var2,&var3,&var4,&var5,&var6);
 
-	N1 = (var1*var3) + var2;
+	N1 = (var1*var3) + var2;			//simplyfying numerators
 	N2 = (var4*var6) + var5;
 
 	toast.setn(N1);
@@ -26,9 +26,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	eggs.setn(N2);
 	eggs.setd(var6);
 	
+	breakfast = toast + eggs;
+	cout <<endl << "Addition:" << breakfast.getn() << "/" << breakfast.getd() << "\n";
 
+	breakfast = toast - eggs;
+	cout << "Subtraction:" << breakfast.getn() << "/" << breakfast.getd() << "\n";
 
-		
+	breakfast = toast * eggs;
+	cout << "Multiplication:" << breakfast.getn() << "/" << breakfast.getd() << "\n";
+
+	breakfast = toast / eggs;
+	cout << "Division:" << breakfast.getn() << "/" << breakfast.getd() << endl;
+
 	return 0;
 }
 
