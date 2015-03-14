@@ -6,7 +6,7 @@ using namespace std;
 
 Fraction::Fraction()
 {
-	w = 0;
+	
 	n = 0;
 	d = 0;
 };
@@ -14,7 +14,7 @@ Fraction::Fraction()
 
 Fraction::~Fraction()
 {
-	w = 0;
+
 	n = 0;
 	d = 0;
 };
@@ -29,11 +29,6 @@ void Fraction::setd(int y)			//sets denominator
 	d = y;
 }
 
-void Fraction::setw(int z)
-{
-	w = z;
-}
-
 int Fraction::getn()				//returns numerator 
 {
 	return n;
@@ -43,10 +38,7 @@ int Fraction::getd()				//returns denominator
 {
 	return d;
 }
-int Fraction::getw()
-{
-	return w;
-}
+
 
 
 
@@ -93,7 +85,7 @@ ostream& operator<<(ostream& out, const Fraction& F)
 {
 	int pancake, waffle;
 		
-	pancake = F.n % F.d;
+	pancake = F.n % F.d;										//provides remainder for easy printing
 	waffle = F.n / F.d;
 
 	if (waffle == 0)
@@ -106,20 +98,21 @@ ostream& operator<<(ostream& out, const Fraction& F)
 	}
 	return out;
 }
+
 istream& operator>>(istream& in, Fraction& F)
 {
 	int tupperware;
 	char scan=0,fslash;
 
 	in >> tupperware;
-	in.get(scan);
+	in.get(scan);										//stores next character in the stream to scan variable
 	
 	if (scan == ' ')
 	{
 		int fruit, nuts;
 
-		in >> fruit >> fslash >> nuts;
-		F.n = (tupperware*nuts) + fruit;
+		in >> fruit >> fslash >> nuts;					//use of dummy variable to store forward slash
+		F.n = (tupperware*nuts) + fruit;		
 		F.d = nuts;
 	}
 
