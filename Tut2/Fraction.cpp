@@ -1,26 +1,7 @@
-
-class Fraction
-
-{
-private:
-	int w;		//whole number
-	int n;		//numerator
-	int d;		//denominator
-	
-public:
-	Fraction();
-	~Fraction();
-	void setn(int);
-	void setd(int);
-	int getn();
-	int getd();
-
-	Fraction operator+(Fraction &);
-	Fraction operator-(Fraction &);
-	Fraction operator*(Fraction &);
-	Fraction operator/(Fraction &);
-	
-};
+using namespace std;
+#include <iostream>
+#include "Fraction.h"
+#include <string>
 
 
 Fraction::Fraction()
@@ -48,6 +29,11 @@ void Fraction::setd(int y)			//sets denominator
 	d = y;
 }
 
+void Fraction::setw(int z)
+{
+	w = z;
+}
+
 int Fraction::getn()				//returns numerator 
 {
 	return n;
@@ -56,6 +42,10 @@ int Fraction::getn()				//returns numerator
 int Fraction::getd()				//returns denominator
 {
 	return d;
+}
+int Fraction::getw()
+{
+	return w;
 }
 
 
@@ -98,3 +88,52 @@ Fraction Fraction:: operator/(Fraction &milk)
 	return cookies;
 
 }
+
+ostream& operator<<(ostream& out, const Fraction& F)
+{
+	int pancake, waffle;
+		
+	pancake = F.n % F.d;
+	waffle = F.n / F.d;
+
+	if (waffle == 0)
+	{
+		out << F.n << "/" << F.d;
+	}
+	else
+	{
+		out << waffle << pancake << "/" << F.d;
+	}
+	return out;
+}
+istream& operator>>(istream& in, Fraction& F)
+{
+	int tupperware;
+	char scan=0,fslash;
+
+	in >> tupperware;
+	in.get(scan);
+	
+	if (scan == ' ')
+	{
+		int fruit, nuts;
+
+		in >> fruit >> fslash >> nuts;
+		F.n = (tupperware*nuts) + fruit;
+		F.d = nuts;
+	}
+
+	else if (scan == '/')
+	{
+		F.n = tupperware;
+		in >> F.d;
+	}
+
+	else
+	{
+		F.n = tupperware;
+		F.d = 1;
+	}
+	return in;
+}
+
