@@ -39,10 +39,6 @@ int Fraction::getd()				//returns denominator
 	return d;
 }
 
-
-
-
-
 Fraction Fraction::operator+(Fraction &milk)
 {
 	Fraction cookies;
@@ -94,7 +90,7 @@ ostream& operator<<(ostream& out, const Fraction& F)
 	}
 	else
 	{
-		out << waffle << pancake << "/" << F.d;
+		out << waffle<< " " << pancake << "/" << F.d;
 	}
 	return out;
 }
