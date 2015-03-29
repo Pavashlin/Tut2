@@ -1,8 +1,8 @@
-using namespace std;
+
 #include <iostream>
 #include "Fraction.h"
 #include <string>
-
+using namespace std;
 
 Fraction::Fraction()
 {

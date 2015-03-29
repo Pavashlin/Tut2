@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut2", "Tut2\Tut2.vcxproj", "{E5FBBF94-D7B2-4BAA-A6A0-640D3D117056}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FractionTest", "FractionTest\FractionTest.vcxproj", "{09CB0016-D62E-4658-901E-CAAC34808345}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +17,10 @@ Global
 		{E5FBBF94-D7B2-4BAA-A6A0-640D3D117056}.Debug|Win32.Build.0 = Debug|Win32
 		{E5FBBF94-D7B2-4BAA-A6A0-640D3D117056}.Release|Win32.ActiveCfg = Release|Win32
 		{E5FBBF94-D7B2-4BAA-A6A0-640D3D117056}.Release|Win32.Build.0 = Release|Win32
+		{09CB0016-D62E-4658-901E-CAAC34808345}.Debug|Win32.ActiveCfg = Debug|Win32
+		{09CB0016-D62E-4658-901E-CAAC34808345}.Debug|Win32.Build.0 = Debug|Win32
+		{09CB0016-D62E-4658-901E-CAAC34808345}.Release|Win32.ActiveCfg = Release|Win32
+		{09CB0016-D62E-4658-901E-CAAC34808345}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
